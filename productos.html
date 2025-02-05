@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+        </style>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/productos.css">
+        <link rel="shortcut icon" href="img/logo.png" />
+
+        <title>Blade · Productos</title>
+    </head>
+    <body>
+        <header>
+            <div class="encabezado">
+                <div class="omnipresente"><a href="index.html"><h1 class="titulo">blade_</h1></a></div>
+                <div class="omnipresente">
+                    <div class="omnipresente"><a href="productos.html"><h1>productos</h1></a></div>
+                    <div class="omnipresente"><a href="cesta.html"><h1>cesta</h1></a></div>
+                    <div class="omnipresente"><a href="perfil.html"><h1>perfil</h1></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div id="loading" class="loading">
+            <img src="img/logo.png">
+        </div>
+
+        <main>
+            <div class="superbotones">
+                <h1>Nuestros Productos</h1>
+                <div class="filter-buttons">
+                    <button onclick="filterProducts('all')">Todos</button>
+                    <button onclick="filterProducts('teclado')">Teclados</button>
+                    <button onclick="filterProducts('keycap')">Keycaps</button>
+                    <button onclick="filterProducts('switch')">Switches</button>
+                    <button onclick="filterProducts('accesorio')">Accesorios</button>
+                </div>
+            </div>
+            <div id="modal-background" class="modal-background"></div> <!-- Fondo oscuro -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <img id="modal-image" src="" alt="Producto">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-price"></p>
+                    <button id="modal-button">Añadir a la cesta</button>
+                </div>
+                <span class="close-button">&times;</span>
+            </div>
+
+            <div class="product-container">
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p1.avif', 'NPKC Gradient PBT Doubleshot Side-Lit Keycap Set', '59,99€')">
+                        <img src="img/productos/p1.avif" alt="p1">
+                        <h3>NPKC Gradient PBT Doubleshot Side-Lit Keycap Set</h3>
+                        <p class="price">59,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p2.avif', 'ZOMO Silicone Kitty Paw Artisan Keycaps', '9,99€')">
+                        <img src="img/productos/p2.avif" alt="p2">
+                        <h3>ZOMO Silicone Kitty Paw Artisan Keycaps</h3>
+                        <p class="price">9,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p3.avif', 'The Lord of the Rings™ Fellowship Desk Mat', '24,99€')">
+                        <img src="img/productos/p3.avif" alt="p3">
+                        <h3>The Lord of the Rings™ Fellowship Desk Mat</h3>
+                        <p class="price">24,99€</p>
+                    </a>
+                </div>
+                <div class="product switch">
+                    <a class="boton" onclick="openModal('img/productos/p4.avif', 'G-Square Mechanical Switches', '14,99€')">
+                        <img src="img/productos/p4.avif" alt="p4">
+                        <h3>G-Square Mechanical Switches</h3>
+                        <p class="price">14,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p5.avif', 'Tokyo Keyboard Tokyo60 Keyboard Kit', '69,99€')">
+                        <img src="img/productos/p5.avif" alt="p5">
+                        <h3>Tokyo Keyboard Tokyo60 Keyboard Kit</h3>
+                        <p class="price">69,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p6.avif', 'MiTo Ultra Pegaso Desk Mat Grey', '19,99€')">
+                        <img src="img/productos/p6.avif" alt="p6">
+                        <h3>MiTo Ultra Pegaso Desk Mat Grey</h3>
+                        <p class="price">19,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p7.avif', 'Megalodon Triple Knob Macropad', '99,99€')">
+                        <img src="img/productos/p7.avif" alt="p7">
+                        <h3>Megalodon Triple Knob Macropad</h3>
+                        <p class="price">99,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p8.avif', 'MiTo GMK Laser Custom Keycap Set', '59,99€')">
+                        <img src="img/productos/p8.avif" alt="p8">
+                        <h3>MiTo GMK Laser Custom Keycap Set</h3>
+                        <p class="price">59,99€</p>
+                    </a>
+                </div>
+                <div class="product switch">
+                    <a class="boton" onclick="openModal('img/productos/p9.avif', 'Drop Holy Panda X Mechanical Switches', '14,99€')">
+                        <img src="img/productos/p9.avif" alt="p9">
+                        <h3>Drop Holy Panda X Mechanical Switches</h3>
+                        <p class="price">14,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p10.avif', 'RedSuns GMK Red Samurai Keycap Set', '59,99€')">
+                        <img src="img/productos/p10.avif" alt="p10">
+                        <h3>RedSuns GMK Red Samurai Keycap Set</h3>
+                        <p class="price">59,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p11.avif', 'Stack Overflow The Key V2 Macropad', '39,99€')">
+                        <img src="img/productos/p11.avif" alt="p11">
+                        <h3>Stack Overflow The Key V2 Macropad</h3>
+                        <p class="price">39,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p12.avif', 'The Lord of the Rings™ The One Ring Artisan Keycap', '9,99€')">
+                        <img src="img/productos/p12.avif" alt="p12">
+                        <h3>The Lord of the Rings™ The One Ring Artisan Keycap</h3>
+                        <p class="price">9,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p13.avif', 'The Lord of the Rings™ The One Ring Artisan Keycap', '9,99€')">
+                        <img src="img/productos/p13.avif" alt="p13">
+                        <h3>The Lord of the Rings™ The One Ring Artisan Keycap</h3>
+                        <p class="price">9,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p14.avif', 'The Lord of the Rings™ The One Ring Artisan Keycap', '9,99€')">
+                        <img src="img/productos/p14.avif" alt="p14">
+                        <h3>The Lord of the Rings™ The One Ring Artisan Keycap</h3>
+                        <p class="price">9,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p15.avif', 'Drop MT3 Black-on-White Keycap Set', '59,99€')">
+                        <img src="img/productos/p15.avif" alt="p15">
+                        <h3>Drop MT3 Black-on-White Keycap Set</h3>
+                        <p class="price">59,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p16.avif', 'Drop MT3 Black-on-White Keycap Set', '17,99€')">
+                        <img src="img/productos/p16.avif" alt="p16">
+                        <h3>Drop ALT Keyboard Soft Carry Case</h3>
+                        <p class="price">17,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p17.avif', 'Drop MT3 Camillo Keycap Set', '59,99€')">
+                        <img src="img/productos/p17.avif" alt="p17">
+                        <h3>Drop MT3 Camillo Keycap Set</h3>
+                        <p class="price">59,99€</p>
+                    </a>
+                </div>
+                <div class="product switch">
+                    <a class="boton" onclick="openModal('img/productos/p18.avif', 'Everglide Aqua King Mechanical Switches', '14,99€')">
+                        <img src="img/productos/p18.avif" alt="p18">
+                        <h3>Everglide Aqua King Mechanical Switches</h3>
+                        <p class="price">14,99€</p>
+                    </a>
+                </div>
+                <div class="product switch">
+                    <a class="boton" onclick="openModal('img/productos/p19.avif', 'Phantom Plate-Mounted Stabilizer Pack', '8,99€')">
+                        <img src="img/productos/p19.avif" alt="p19">
+                        <h3>Phantom Plate-Mounted Stabilizer Pack</h3>
+                        <p class="price">8,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p20.avif', 'GMK White-on-Black Katakana Custom Keycap Set', '59,99€')">
+                        <img src="img/productos/p20.avif" alt="p20">
+                        <h3>GMK White-on-Black Katakana Custom Keycap Set</h3>
+                        <p class="price">59,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p21.avif', 'Drop USB-C to USB-C Cable', '12,99€')">
+                        <img src="img/productos/p21.avif" alt="p21">
+                        <h3>Drop USB-C to USB-C Cable</h3>
+                        <p class="price">12,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p22.avif', 'Keycadets Gravity Desk Mat', '19,99€')">
+                        <img src="img/productos/p22.avif" alt="p22">
+                        <h3>Keycadets Gravity Desk Mat</h3>
+                        <p class="price">19,99€</p>
+                    </a>
+                </div>
+                <div class="product switch">
+                    <a class="boton" onclick="openModal('img/productos/p23.avif', 'IDOBAO x Kailh Elf Ultra-Silent Mechanical Switches', '19,99€')">
+                        <img src="img/productos/p23.avif" alt="p23">
+                        <h3>IDOBAO x Kailh Elf Ultra-Silent Mechanical Switches</h3>
+                        <p class="price">19,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p24.avif', 'The Lord of the Rings™ Elvish Keyboard', '139,99€')">
+                        <img src="img/productos/p24.avif" alt="p24">
+                        <h3>The Lord of the Rings™ Elvish Keyboard</h3>
+                        <p class="price">139,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p25.avif', 'Drop CSTM80 Mechanical Keyboard', '119,99€')">
+                        <img src="img/productos/p25.avif" alt="p25">
+                        <h3>Drop CSTM80 Mechanical Keyboard</h3>
+                        <p class="price">119,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p26.avif', 'IDOBAO ID80 Crystal Gasket Barebones Keyboard Kit', '59,99€')">
+                        <img src="img/productos/p26.avif" alt="p26">
+                        <h3>IDOBAO ID80 Crystal Gasket Barebones Keyboard Kit</h3>
+                        <p class="price">59,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p27.avif', 'Womier K21 Hot-Swappable RGB Acrylic Mechanical Keypad', '49,99€')">
+                        <img src="img/productos/p27.avif" alt="p27">
+                        <h3>Womier K21 Hot-Swappable RGB Acrylic Mechanical Keypad</h3>
+                        <p class="price">49,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p28.avif', 'Keydous NJ80 Wireless RGB Hot-Swappable Keyboard', '109,99€')">
+                        <img src="img/productos/p28.avif" alt="p28">
+                        <h3>Keydous NJ80 Wireless RGB Hot-Swappable Keyboard</h3>
+                        <p class="price">109,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p29.avif', 'MelGeek Mojo68 Wireless Plastic Keyboard', '99,99€')">
+                        <img src="img/productos/p29.avif" alt="p29">
+                        <h3>MelGeek Mojo68 Wireless Plastic Keyboard</h3>
+                        <p class="price">99,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p30.avif', 'Angry Miao HATSU Wireless Split Ergonomic Keyboard', '1499,99€')">
+                        <img src="img/productos/p30.avif" alt="p30">
+                        <h3>Angry Miao HATSU Wireless Split Ergonomic Keyboard</h3>
+                        <p class="price">1499,99€</p>
+                    </a>
+                </div>
+                <div class="product teclado">
+                    <a class="boton" onclick="openModal('img/productos/p31.avif', 'Angry Miao HATSU Wireless Split Ergonomic Keyboard', '1499,99€')">
+                        <img src="img/productos/p31.avif" alt="p31">
+                        <h3>CIDOO V68 Alice Gasket-Mounted Mechanical Keyboard</h3>
+                        <p class="price">149,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p32.avif', 'NPKC Wooden Wrist Rests', '24,99€')">
+                        <img src="img/productos/p32.avif" alt="p32">
+                        <h3>NPKC Wooden Wrist Rests</h3>
+                        <p class="price">24,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p33.avif', 'Stone Acrylic Keyboard Dust Cover', '4,99€')">
+                        <img src="img/productos/p33.avif" alt="p33">
+                        <h3>Stone Acrylic Keyboard Dust Cover</h3>
+                        <p class="price">4,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p34.avif', 'KeebMonkey Switch and Stabilizer Keyboard Lubricant', '3,99€')">
+                        <img src="img/productos/p34.avif" alt="p34">
+                        <h3>KeebMonkey Switch and Stabilizer Keyboard Lubricant</h3>
+                        <p class="price">3,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p35.avif', 'KeebMonkey Custom Acrylic Lube Station Kit', '39,99€')">
+                        <img src="img/productos/p35.avif" alt="p35">
+                        <h3>KeebMonkey Custom Acrylic Lube Station Kit</h3>
+                        <p class="price">39,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p36.avif', 'Mechcables Susuwatari Custom Coiled Aviator USB Cable', '29,99€')">
+                        <img src="img/productos/p36.avif" alt="p36">
+                        <h3>Mechcables Susuwatari Custom Coiled Aviator USB Cable</h3>
+                        <p class="price">29,99€</p>
+                    </a>
+                </div>
+                <div class="product accesorio">
+                    <a class="boton" onclick="openModal('img/productos/p37.avif', 'Drop SENSE75 IXPE Switch Foam', '9,99€')">
+                        <img src="img/productos/p37.avif" alt="p37">
+                        <h3>Drop SENSE75 IXPE Switch Foam</h3>
+                        <p class="price">9,99€</p>
+                    </a>
+                </div>
+                <div class="product keycap">
+                    <a class="boton" onclick="openModal('img/productos/p38.avif', 'Tai-Hao Neon Rubber Backlit Gaming Keycap Set', '8,99€')">
+                        <img src="img/productos/p38.avif" alt="p38">
+                        <h3>Tai-Hao Neon Rubber Backlit Gaming Keycap Set</h3>
+                        <p class="price">8,99€</p>
+                    </a>
+                </div>
+                <div class="product switch">
+                    <a class="boton" onclick="openModal('img/productos/p39.avif', 'Assorted Mechanical Switches Sampler Pack', '19,99€')">
+                        <img src="img/productos/p39.avif" alt="p39">
+                        <h3>Assorted Mechanical Switches Sampler Pack</h3>
+                        <p class="price">19,99€</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <br>
+            <h1> blade_ </h1>
+            © blade Corporation S.A. 2024-2025
+            <br><br>
+        </footer>
+    </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/filtrar.js"></script>
+<script src="js/carga.js"></script>
+<script src="js/presentacion.js"></script>
+<script src="js/listadelacompra.js"></script>
+</html>

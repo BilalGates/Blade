@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+        </style>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cesta.css">
+        <link rel="shortcut icon" href="img/logo.png" />
+
+        <title>Blade · Cesta</title>
+    </head>
+    <body>
+        <header>
+            <div class="encabezado">
+                <div class="omnipresente"><a href="index.html"><h1 class="titulo">blade_</h1></a></div>
+                <div class="omnipresente">
+                    <div class="omnipresente"><a href="productos.html"><h1>productos</h1></a></div>
+                    <div class="omnipresente"><a href="cesta.html"><h1>cesta</h1></a></div>
+                    <div class="omnipresente"><a href="perfil.html"><h1>perfil</h1></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div id="loading" class="loading">
+            <img src="img/logo.png">
+        </div>
+
+        <main>
+            <div class="articulos">
+                <h1>Artículos en tu cesta</h1>
+            </div>
+            <div class="cart-container">
+                <div id="cart-items"></div>
+                <br>
+                <h3><div id="total-price">Total: 0€</div></h3>
+                <br>
+                <button id="checkout-button">Realizar compra</button>
+                <br>
+            </div>
+        </main>
+        <br>
+        <footer>
+            <br>
+            <h1> blade_ </h1>
+            © blade Corporation S.A. 2024-2025
+            <br><br>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/carga.js"></script>
+    <script src="js/listadelacompra.js"></script>
+    <script src="js/comprando.js"></script>
+</html>

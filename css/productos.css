@@ -1,0 +1,214 @@
+/* Estilo del body: margen superior para la barra de navegación */
+body {
+    margin-top: 240px;
+}
+
+/* Estilo de la lista de productos */
+.product-list {
+    text-align: center; /* Centrar el texto en la lista */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Contenedor de productos: diseño flexible */
+.product-container {
+    display: flex; /* Flexbox para distribución */
+    flex-wrap: wrap; /* Permite el ajuste de filas */
+    justify-content: center; /* Centra los productos */
+    gap: 20px; /* Espacio entre productos */
+    padding-top: 20px; /* Espaciado superior */
+    padding-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo de cada producto */
+.product {
+    max-width: 350px; /* Ancho máximo de cada producto */
+    border: 1px solid #ccc; /* Borde alrededor del producto */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo */
+    text-align: center; /* Centra el texto dentro del producto */
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el cursor sobre el producto */
+.product:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+}
+
+/* Imagen dentro del producto */
+.product img {
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Altura automática para mantener proporciones */
+    border-radius: 5px; /* Bordes redondeados en la imagen */
+}
+
+/* Estilo del título del producto */
+.product h3 {
+    padding: 10px; /* Espaciado interno */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo del precio del producto */
+.product .price {
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #555; /* Color del texto */
+    margin-top: 5px; /* Margen superior */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo del modal */
+.modal {
+    position: fixed; /* Fijo para centrarlo en la pantalla */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%) scale(0.5); /* Comienza más pequeño */
+    z-index: 9999; /* Por encima del resto del contenido */
+    display: none; /* Oculto por defecto */
+    width: 80%; /* Ancho del modal */
+    max-width: 900px; /* Ancho máximo del modal */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    opacity: 0; /* Empieza invisible */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Transiciones suaves */
+}
+
+/* Fondo oscuro que cubre toda la pantalla */
+.modal-background {
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0; /* Posición superior */
+    left: 0; /* Posición izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    z-index: 9998; /* Debajo del modal */
+    display: none; /* Oculto por defecto */
+    opacity: 0; /* Empieza invisible */
+    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+}
+
+/* Contenido del modal en estilo flex */
+.modal-content {
+    display: flex; /* Flexbox para contenido */
+    flex-direction: row; /* Alineación horizontal */
+    background-color: white; /* Color de fondo del contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    gap: 20px; /* Espacio entre elementos del contenido */
+    align-items: center; /* Alineación vertical */
+}
+
+/* Mostrar el modal con la animación activa */
+.modal.show {
+    opacity: 1; /* Hacer visible el modal */
+    transform: translate(-50%, -50%) scale(1); /* Escala normal */
+}
+
+.modal-background.show {
+    opacity: 1; /* Hacer visible el fondo oscuro */
+}
+
+/* Imagen dentro del modal */
+#modal-image {
+    width: 50%; /* Ocupa la mitad del modal */
+    max-width: 400px; /* Ancho máximo de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Sección de texto dentro del modal */
+.modal-info {
+    flex: 1; /* Para que el texto ocupe el espacio restante */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Estilo del título en el modal */
+.modal-info h3 {
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilo del texto en el modal */
+.modal-info p {
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #555; /* Color del texto */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+/* Botón de cerrar del modal */
+.close-button {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 30px; /* Espacio desde la parte superior */
+    right: 30px; /* Espacio desde la derecha */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    border-radius: 20%; /* Bordes redondeados */
+    background-color: black; /* Color de fondo */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    cursor: pointer; /* Cursor de puntero al pasar */
+    z-index: 1000; /* Por encima del modal */
+}
+
+/* Líneas cruzadas del botón de cerrar */
+.close-button:before, .close-button:after {
+    content: ''; /* Contenido vacío para crear líneas */
+    width: 60%; /* Ancho de las líneas */
+    height: 2px; /* Grosor de las líneas */
+    background-color: white; /* Color de las líneas */
+    position: absolute; /* Posicionamiento absoluto */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.close-button:before {
+    transform: rotate(45deg); /* Rotación para la línea superior */
+}
+
+.close-button:after {
+    transform: rotate(-45deg); /* Rotación para la línea inferior */
+}
+
+/* Efecto al pasar el cursor sobre el botón de cerrar */
+.close-button:hover:before, .close-button:hover:after {
+    transform: rotate(180deg); /* Efecto de rotación */
+}
+
+/* Estilo de la barra de botones */
+.superbotones {
+    margin-top: 80px; /* Margen superior */
+    display: flex; /* Flexbox para la barra */
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+    width: 100%; /* Ocupar todo el ancho */
+    position: fixed; /* Mantener la barra en la parte superior */
+    top: 0; /* Alinear en la parte superior */
+    z-index: 1000; /* Por encima del contenido */
+    background-color: #adb5bd; /* Color de fondo de la barra */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo de los botones de filtro */
+.filter-buttons {
+    display: flex; /* Usar flexbox para los botones */
+    justify-content: center; /* Centrar los botones dentro */
+    width: 100%; /* Ocupar todo el ancho */
+    margin-bottom: 20px; /* Espacio debajo de la barra */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) { /* Ajustes para pantallas pequeñas */
+    body {
+        margin-top: 360px; /* Aumentar margen superior */
+    }
+
+    .filter-buttons {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Alinear botones al centro */
+    }
+
+    .filter-buttons button  {
+        padding: 0.25em 0.75em; /* Ajustar padding en botones */
+    }
+}

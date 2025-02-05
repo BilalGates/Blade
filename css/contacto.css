@@ -1,0 +1,87 @@
+/* Estilos generales para el elemento main */
+main {
+    margin-top: 80px; /* Margen superior para separar del encabezado */
+}
+
+/* Estilos para el contenedor de la ola */
+.ola {
+    background-color: #adb5bd; /* Color de fondo gris claro */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 40px; /* Espacio debajo del contenedor */
+}
+
+/* Estilos para el formulario de contacto */
+.contact {
+    max-width: 500px; /* Tamaño máximo del contenedor */
+    width: 100%; /* Para que sea responsive */
+    background-color: #ffffff; /* Color de fondo blanco */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    text-align: center; /* Centra el contenido */
+    flex-direction: column; /* Alineación en columna */
+    align-items: center; /* Centrar elementos */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-bottom: 40px; /* Espacio debajo del contenedor */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex; /* Usar flexbox para el formulario */
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: center; /* Centrar elementos */
+}
+
+/* Estilos para los fieldset */
+fieldset {
+    margin-bottom: 20px; /* Espacio debajo de cada fieldset */
+    border: 1px solid #ddd; /* Borde suave */
+    padding: 15px; /* Espaciado interno */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilos para el legend dentro de los fieldsets */
+legend {
+    font-size: 1.2em; /* Tamaño de fuente mayor */
+    font-weight: bold; /* Negrita */
+    padding: 0 10px; /* Espaciado lateral */
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block; /* Mostrar como bloque */
+    margin-bottom: 10px; /* Espacio debajo de cada etiqueta */
+    font-size: 1.1em; /* Tamaño de fuente mayor */
+}
+
+/* Estilos para los campos de entrada y el área de texto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 90%; /* Ancho del 90% */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio debajo de cada campo */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde suave */
+    font-size: 1em; /* Tamaño de fuente estándar */
+}
+
+/* Estilos específicos para el área de texto */
+textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+    max-width: 100%; /* Ancho máximo del 100% */
+}
+
+/* Estilos para los campos de entrada personalizados */
+input {
+    border: none; /* Elimina el borde */
+    background: none; /* Elimina el fondo */
+    box-shadow: none; /* Elimina cualquier sombra */
+    outline: none; /* Evita el borde que aparece al enfocarse */
+    padding: 0; /* Elimina cualquier padding predeterminado */
+    font-family: "Handjet", system-ui; /* Fuente personalizada */
+    font-weight: 700; /* Negrita */
+    font-size: 1.1em; /* Tamaño de fuente mayor */
+}

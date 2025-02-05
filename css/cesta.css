@@ -1,0 +1,53 @@
+/* Estilos generales para el elemento main */
+main {
+    margin-top: 80px; /* Margen superior para separar del encabezado */
+}
+
+/* Estilos para la sección de artículos */
+.articulos {
+    background-color: #adb5bd; /* Color de fondo gris claro */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar texto en la sección */
+}
+
+/* Contenedor principal del carrito */
+.cart-container {
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    flex-grow: 1; /* Permite al contenedor crecer si hay espacio disponible */
+    flex-direction: column; /* Alineación en columna */
+}
+
+/* Estilos para cada artículo en el carrito */
+.cart-item {
+    display: flex; /* Usar flexbox para organizar el contenido */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 15px; /* Espaciado interno */
+    border-bottom: 1px solid #ccc; /* Borde inferior para separar los artículos */
+}
+
+/* Estilos para los textos dentro de cada artículo */
+.cart-item p, .p {
+    font-weight: 700; /* Negrita para mayor énfasis */
+    font-size: 1.2vw; /* Tamaño de fuente relativo a la vista */
+}
+
+/* Estilos para las imágenes de los artículos */
+.cart-item img {
+    width: 100px; /* Tamaño uniforme de 100px de ancho */
+    height: auto; /* Altura automática para mantener proporciones */
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+    object-fit: cover; /* Ajustar la imagen sin distorsionar */
+}
+
+/* Estilos para el botón de eliminar */
+button.eliminar {
+    padding: 10px 15px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente del texto del botón */
+    width: auto; /* Ancho automático para adaptarse al contenido */
+    height: auto; /* Alto automático para adaptarse al contenido */
+    border: 1px solid #000; /* Borde negro */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}

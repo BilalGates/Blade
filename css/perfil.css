@@ -1,0 +1,47 @@
+/* Estilos generales para el elemento main */
+main {
+    margin-top: 80px; /* Margen superior para separar del encabezado */
+}
+
+/* Estilos para el contenedor del perfil */
+.perfil {
+    max-width: 500px; /* Tamaño máximo más compacto */
+    margin: 80px auto; /* Centrar horizontalmente y margen superior */
+    background-color: #ffffff; /* Color de fondo blanco */
+    padding: 60px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra suave y difusa */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+    display: flex; /* Usar flexbox para la alineación */
+    flex-direction: column; /* Alinear elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Alinear texto al centro */
+}
+
+/* Efecto al pasar el ratón sobre el perfil */
+.perfil:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada al pasar el ratón */
+}
+
+/* Estilos para la imagen del perfil */
+.perfil img {
+    border-radius: 50%; /* Hacer la imagen circular */
+    width: 120px; /* Tamaño de la imagen ligeramente más grande */
+    height: 120px; /* Altura de la imagen igual al ancho */
+    margin-bottom: 20px; /* Separación inferior mayor */
+    border: 3px solid #333; /* Borde oscuro alrededor de la imagen */
+}
+
+/* Estilos para el encabezado del perfil */
+.perfil-info h2 {
+    margin: 10px 0; /* Espacio superior e inferior */
+    font-size: 1.8em; /* Tamaño de fuente mayor */
+    color: #222; /* Color de texto más oscuro */
+}
+
+/* Estilos para los párrafos de información del perfil */
+.perfil-info p {
+    margin: 8px 0; /* Mayor espacio entre párrafos */
+    font-size: 1.1em; /* Tamaño de texto aumentado */
+    color: #333; /* Color del texto más suave */
+}

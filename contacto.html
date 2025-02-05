@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+        </style>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/contacto.css">
+        <link rel="shortcut icon" href="img/logo.png" />
+
+        <title>Blade · Por ti</title>
+    </head>
+    <body>
+        <header>
+            <div class="encabezado">
+                <div class="omnipresente"><a href="index.html"><h1 class="titulo">blade_</h1></a></div>
+                <div class="omnipresente">
+                    <div class="omnipresente"><a href="productos.html"><h1>productos</h1></a></div>
+                    <div class="omnipresente"><a href="cesta.html"><h1>cesta</h1></a></div>
+                    <div class="omnipresente"><a href="perfil.html"><h1>perfil</h1></a></div>
+                </div>
+            </div>
+        </header>
+
+        <div id="loading" class="loading">
+            <img src="img/logo.png">
+        </div>
+
+        <main>
+            <div class="ola">
+                <h1>Formulario de Contacto</h1>
+            </div>
+            <div  class="contact">
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="phone">Teléfono:</label>
+                        <input type="tel" id="phone" name="phone"><br><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Mensaje</legend>
+                        <label for="message">Tu Mensaje:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                    </fieldset>
+                    <button><input type="submit" value="Enviar"></button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <br>
+            <h1> blade_ </h1>
+            © blade Corporation S.A. 2024-2025
+            <br><br>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/carga.js"></script>
+</html>
